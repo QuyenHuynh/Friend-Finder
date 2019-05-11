@@ -17,8 +17,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-//Tells the server where our static css is
-app.use(express.static("/app/public/css"));
+//Tells the server where our static pages are
+app.use(express.static("app/public"));
 
 //Server Routing Map
 apiRoutes(app);

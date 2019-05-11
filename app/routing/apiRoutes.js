@@ -43,8 +43,8 @@ function apiRoutes(app) {
         //Determining the best match by looping through differenceArr
         for (var k = 0; k < differenceArr.length; k++) {
             //Search for the lowest difference in each iteration and reassign bestMatch variable if equal or lower
-            if (differenceArr[i] <= differenceArr[bestMatchIndex]) {
-                bestMatchIndex = i;
+            if (differenceArr[k] <= differenceArr[bestMatchIndex]) {
+                bestMatchIndex = k;
             }
         }
 
