@@ -4,8 +4,8 @@ var bodyParser = require("body-parser");
 var path = require('path');
 
 // API and HTML routes
-require("./app/routing/apiRoutes.js")(app);
-require("./app/routing/htmlRoutes.js")(app);
+var apiRoutes = require("./app/routing/apiRoutes.js");
+var htmlRoutes = require("./app/routing/htmlRoutes.js");
 
 //Create instance of express and set port
 var app = express();
@@ -19,6 +19,10 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 //Tells the server where our static css is
 app.use(express.static("/app/public/css"));
+
+//Server Routing Map
+apiRoutes(app);
+htmlRoutes(app);
 
 //Start the server
 app.listen(PORT, function() {

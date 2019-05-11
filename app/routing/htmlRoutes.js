@@ -1,7 +1,7 @@
 const path = require('path');
 
-module.exports = function (app) {
-    //If survey button is pressed or entered in url, display survey.html
+function htmlRoutes(app) {
+	//If survey button is pressed or entered in url, display survey.html
 	app.get('/survey', function (req, res) {
 		res.sendFile(path.join(__dirname + '/../public/survey.html'));
 	});
@@ -11,3 +11,6 @@ module.exports = function (app) {
 		res.sendFile(path.join(__dirname + '/../public/home.html'));
 	});
 };
+
+//Export for server.js file
+module.exports = htmlRoutes;

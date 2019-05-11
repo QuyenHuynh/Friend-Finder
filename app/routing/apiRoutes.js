@@ -1,6 +1,6 @@
 var friends = require("../data/friends");
 
-module.exports = function (app) {
+function apiRoutes(app) {
     // API GET request and return as JSON data
     app.get("/api/friends", function (req, res) {
         res.json(friends);
@@ -18,7 +18,7 @@ module.exports = function (app) {
 
         //We need to parseInt the scores because incoming data is string
         var parsedScores = [];
-        for (var i = 0; i < user.scores.length; i++) {
+        for (var i = 0; i < newUser.scores.length; i++) {
             parsedScores.push(parseInt(req.body.scores[i]));
         }
         newUser.scores = parsedScores;
@@ -54,6 +54,9 @@ module.exports = function (app) {
         res.json(bestMatch);
 
         // Push the user's data to the database
-        friends.push(userData);
+        friends.push(newUser);
     });
 };
+
+//Export for server.js file
+module.exports = apiRoutes;
