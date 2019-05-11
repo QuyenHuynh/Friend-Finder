@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <title>Friend Finder</title>
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--bootstrap css-->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!--google font import-->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <!--skeleton framework css-->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <!--favicon-->
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
+
 <body>
 
   <div class="container">
@@ -18,10 +26,20 @@
       <div class="12 columns">
         <h4>Friend Finder</h4>
         <p>Complete this quick survey to determine who your best friend should be!</p>
-        <button>Let's Go!</button>
+        <a href="/survey"><button>Let's Go!</button></a>
       </div>
     </div>
   </div>
 
 </body>
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="12 columns">
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/QuyenHuynh/Friend-Finder" target="_blank">GitHub Repo</a> | <a href="/">Home</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </html>
